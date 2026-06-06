@@ -1,226 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>ABL.Solutions</title>
+    <title>Clientes - ABL Solutions</title>
 
     <link rel="stylesheet" href="../style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
     <link rel="icon" href="../img/logo_ABL.jpeg" type="image/jpeg">
-
-
-
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <section class="header">
-        <h1 class="tituloEmpresa"> A.B.L</h1>
-        <p class="parrafo_principal"><strong>
-            Empresa encargada de gestionar tus facturas electronicas de manera eficiente y segura
-            </strong>
-        </p>
-        <img class="logo-header" src="../img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
+
+        <div>
+            <h1 class="tituloEmpresa">
+                <i class='bx bx-buildings'></i>
+                A.B.L Solutions
+            </h1>
+
+            <p class="parrafo_principal">
+                Gestión inteligente de clientes para facturación electrónica.
+            </p>
+        </div>
+
+        <img class="logo-header"
+             src="../img/logo_ABL.jpeg"
+             alt="Logo ABL">
+
     </section>
+
+    <!-- TITULO -->
     <section class="factura-header">
-                <h1 class="factura-title">Clientes</h1>
-                <p class="factura-subtitle">Agrega, edita y elimina clientes</p>
-            </section>
-    <section class="navegacion">
-        <button> Ayuda </button>
-        <button> Configuracion </button>
+
+        <h1 class="factura-title">
+            <i class='bx bx-user'></i>
+            Clientes
+        </h1>
+
+        <p class="factura-subtitle">
+            Administra clientes, edita información y consulta registros.
+        </p>
+
     </section>
-    
+
+    <!-- NAVEGACION -->
+    <section class="navegacion">
+
+        <button>
+            <i class='bx bx-help-circle'></i>
+            Ayuda
+        </button>
+
+        <button>
+            <i class='bx bx-cog'></i>
+            Configuración
+        </button>
+
+    </section>
+
     <section class="factura-page">
+
+        <!-- MENU -->
         <aside class="factura-sidebar">
+
             <section class="listaMenu">
-                <h2 class="h2_menu">Menu</h2>
+
+                <h2 class="h2_menu">
+                    <i class='bx bx-grid-alt'></i>
+                    Menú
+                </h2>
+
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#ingresos">Ingresos</a>
+
+                    <li>
+                        <a href="index.html">
+                            <i class='bx bx-home'></i>
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-receipt'></i>
+                            Ingresos
+                        </a>
+
                         <ul>
                             <li><a href="facturas.html">Facturas</a></li>
                             <li><a href="notas-credito.html">Notas Crédito</a></li>
                             <li><a href="notas-debito.html">Notas Débito</a></li>
                         </ul>
                     </li>
-                    <li><a href="#personas">Personas</a>
+
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-group'></i>
+                            Personas
+                        </a>
+
                         <ul>
                             <li><a href="clientes.html">Clientes</a></li>
                             <li><a href="empleados.html">Empleados</a></li>
                         </ul>
                     </li>
-                    <li><a href="#inventario">Inventario</a>
+
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-package'></i>
+                            Inventario
+                        </a>
+
                         <ul>
                             <li><a href="productos.html">Productos</a></li>
-                            <li><a href="categoria.html">Categoría</a></li>
+                            <li><a href="categoria.html">Categorías</a></li>
                             <li><a href="stok.html">Stock</a></li>
                         </ul>
                     </li>
-                    <li><a href="reportes.html">Reportes</a></li>
+
+                    <li>
+                        <a href="reportes.html">
+                            <i class='bx bx-bar-chart-alt'></i>
+                            Reportes
+                        </a>
+                    </li>
+
                 </ul>
+
             </section>
+
         </aside>
-<div class="clientes-container">
-    <!-- BARRA SUPERIOR -->
-    <div class="barra-clientes">
 
-        <!-- BUSCAR -->
-        <input 
-            type="text" 
-            id="buscar_cliente"
-            placeholder="Buscar por nombre o número de identificación">
+        <!-- CONTENIDO -->
+        <main class="factura-main">
 
-        <!-- BOTONES -->
-        <button type="button" onclick="filtrarClientes()">
-            Filtrar Cliente
-        </button>
+            <!-- CONTROLES -->
+            <div class="factura-controls">
 
-        <button type="button" onclick="limpiarBusqueda()">
-            Limpiar
-        </button>
+                <div class="factura-buttons">
 
-        <!-- NUEVO CLIENTE -->
-        <button type="button" onclick="window.location.href='nuevo_cliente.html'">
-            Nuevo Cliente
-        </button>
-
-    </div>
-
-    <br>
-
-    <!-- TABLA CLIENTES -->
-    <table border="1" width="100%">
-
-        <thead>
-
-            <tr>
-                <th>Tipo ID</th>
-                <th>Número Identificación</th>
-                <th>Nombre / Razón Social</th>
-                <th>Teléfono</th>
-                <th>Correo</th>
-                <th>Acciones</th>
-            </tr>
-
-        </thead>
-
-        <tbody id="tabla_clientes">
-
-            <tr>
-
-                <td>Cédula de ciudadanía</td>
-                <td>123456789</td>
-                <td>Juan Pérez</td>
-                <td>3001234567</td>
-                <td>juan@email.com</td>
-
-                <td>
-
-                    <button type="button" onclick="editarCliente(1)">
-                        Editar
+                    <button onclick="window.location.href='nuevo_cliente.html'">
+                        <i class='bx bx-user-plus'></i>
+                        Nuevo Cliente
                     </button>
 
-                    <button type="button" onclick="eliminarCliente(1)">
-                        Eliminar
+                    <button>
+                        <i class='bx bx-import'></i>
+                        Importar
                     </button>
 
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td>NIT</td>
-                <td>900123456</td>
-                <td>Empresa S.A.S</td>
-                <td>6081234567</td>
-                <td>empresa@email.com</td>
-
-                <td>
-
-                    <button type="button" onclick="editarCliente(2)">
-                        Editar
+                    <button>
+                        <i class='bx bx-download'></i>
+                        Exportar
                     </button>
 
-                    <button type="button" onclick="eliminarCliente(2)">
-                        Eliminar
-                    </button>
+                </div>
 
-                </td>
+                <div class="factura-search">
 
-            </tr>
+                    <input
+                        type="text"
+                        id="buscar_cliente"
+                        placeholder="Buscar cliente...">
 
-        </tbody>
+                </div>
 
-    </table>
+            </div>
 
-</div>
+            <!-- KPIS -->
+            <div class="dashboard-cards">
 
-<script>
+                <div class="dashboard-card">
+                    <i class='bx bx-group'></i>
+                    <h3>128</h3>
+                    <span>Clientes</span>
+                </div>
 
-    function filtrarClientes() {
+                <div class="dashboard-card">
+                    <i class='bx bx-check-circle'></i>
+                    <h3>112</h3>
+                    <span>Activos</span>
+                </div>
 
-        let input = document.getElementById("buscar_cliente").value.toLowerCase();
+                <div class="dashboard-card">
+                    <i class='bx bx-briefcase'></i>
+                    <h3>16</h3>
+                    <span>Empresas</span>
+                </div>
 
-        let tabla = document.getElementById("tabla_clientes");
+            </div>
 
-        let filas = tabla.getElementsByTagName("tr");
+            <!-- TABLA -->
+            <div class="factura-table-wrapper">
 
-        for (let i = 0; i < filas.length; i++) {
+                <table>
 
-            let texto = filas[i].innerText.toLowerCase();
+                    <thead>
 
-            if (texto.includes(input)) {
+                        <tr>
+                            <th>Tipo ID</th>
+                            <th>Identificación</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Correo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
 
-                filas[i].style.display = "";
+                    </thead>
 
-            } else {
+                    <tbody id="tabla_clientes">
 
-                filas[i].style.display = "none";
+                        <tr>
 
-            }
-        }
-    }
+                            <td>CC</td>
+                            <td>123456789</td>
+                            <td>Juan Pérez</td>
+                            <td>3001234567</td>
+                            <td>juan@email.com</td>
 
-    function limpiarBusqueda() {
+                            <td>
+                                <span class="estado-badge estado-pagado">
+                                    Activo
+                                </span>
+                            </td>
 
-        document.getElementById("buscar_cliente").value = "";
+                            <td class="action-buttons">
 
-        let filas = document.querySelectorAll("#tabla_clientes tr");
+                                <button>
+                                    <i class='bx bx-show'></i>
+                                </button>
 
-        filas.forEach(fila => {
+                                <button>
+                                    <i class='bx bx-edit'></i>
+                                </button>
 
-            fila.style.display = "";
+                                <button class="delete-button">
+                                    <i class='bx bx-trash'></i>
+                                </button>
 
-        });
-    }
+                            </td>
 
-    function editarCliente(id) {
+                        </tr>
 
-        alert("Editar cliente ID: " + id);
-    }
+                        <tr>
 
-    function eliminarCliente(id) {
+                            <td>NIT</td>
+                            <td>900123456</td>
+                            <td>Empresa S.A.S</td>
+                            <td>6081234567</td>
+                            <td>empresa@email.com</td>
 
-        let confirmar = confirm("¿Desea eliminar este cliente?");
+                            <td>
+                                <span class="estado-badge estado-pendiente">
+                                    Empresa
+                                </span>
+                            </td>
 
-        if (confirmar) {
+                            <td class="action-buttons">
 
-            alert("Cliente eliminado correctamente");
-        }
-    }
+                                <button>
+                                    <i class='bx bx-show'></i>
+                                </button>
 
-</script>
+                                <button>
+                                    <i class='bx bx-edit'></i>
+                                </button>
+
+                                <button class="delete-button">
+                                    <i class='bx bx-trash'></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </section>
+
+    <section class="footer">
+        <p>ABL Solutions ® 2026 - Todos los derechos reservados</p>
+    </section>
 
 </body>
 </html>

@@ -1,79 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>ABL.Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABL Solutions - Dashboard</title>
 
-    <link rel="stylesheet" href="../style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="../img/logo_ABL.jpeg" type="image/jpeg">
-
-
+```
+<link rel="stylesheet" href="../style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" href="../img/logo_ABL.jpeg" type="image/jpeg">
+```
 
 </head>
 
 <body>
-    <section class="header">
-        <h1 class="tituloEmpresa"> A.B.L</h1>
-        <p class="parrafo_principal"><strong>
-            Empresa encargada de gestionar tus facturas electronicas de manera eficiente y segura
-            </strong>
+
+```
+<!-- HEADER -->
+<section class="header">
+    <div>
+        <h1 class="tituloEmpresa">A.B.L Solutions</h1>
+        <p class="parrafo_principal">
+            Sistema de gestión y facturación electrónica empresarial
         </p>
-        <img class="logo-header" src="../img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
-    </section>
-    <section class="navegacion">
-        <button> Ayuda </button>
-        <button> Configuracion </button>
-    </section>
+    </div>
 
-    <section class="listaMenu">
-        <h2 class="h2_menu"> Menu</h2>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
+    <img class="logo-header"
+        src="../img/logo_ABL.jpeg"
+        alt="Logo ABL">
+</section>
 
-            <li><a href="#ingresos">Ingresos</a>
-                <ul>
-                    <li><a href="facturas.html">Facturas</a></li>
-                    <li><a href="notas-credito.html">Notas Credito</a></li>
-                    <li><a href="notas-debito.html">Notas Debito</a></li>
-                </ul>
-            </li>
+<!-- NAVEGACIÓN -->
+<section class="navegacion">
+    <button><i class='bx bx-help-circle'></i> Ayuda</button>
+    <button><i class='bx bx-cog'></i> Configuración</button>
+</section>
 
-            <li><a href="#personas">Personas</a>
-                <ul>
-                    <li><a href="clientes.html">Clientes</a></li>
-                    <li><a href="empleados.html">Empleados</a></li>
-                </ul>
-            </li>
+<!-- TITULO -->
+<section class="factura-header">
+    <h1 class="factura-title">
+        <i class='bx bx-grid-alt'></i>
+        Panel Principal
+    </h1>
 
-            <li><a href="#inventario">Inventario</a>
-                <ul>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="categoria.html">Categoria</a></li>
-                    <li><a href="stok.html">Stok</a></li>
-                </ul>
-            </li>
+    <p class="factura-subtitle">
+        Bienvenido al sistema de gestión empresarial ABL Solutions
+    </p>
+</section>
 
-            <li><a href="reportes.html">Reportes</a></li>
-        </ul>
-    </section>
+<section class="factura-page">
 
+    <!-- SIDEBAR -->
+    <aside class="factura-sidebar">
 
-    <section class=" footer">
-        <p> ABL.Soluciones ® 2026. Todos los derechos reservados</p>
-    </section>
+        <section class="listaMenu">
 
+            <h2 class="h2_menu">
+                <i class='bx bx-menu'></i>
+                Menú
+            </h2>
 
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        <i class='bx bx-home'></i>
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bx-receipt'></i>
+                        Ingresos
+                    </a>
+
+                    <ul>
+                        <li>
+                            <a href="facturas.html">
+                                <i class='bx bx-file'></i>
+                                Facturas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notas-credito.html">
+                                <i class='bx bx-wallet'></i>
+                                Notas Crédito
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notas-debito.html">
+                                <i class='bx bx-credit-card'></i>
+                                Notas Débito
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bx-group'></i>
+                        Personas
+                    </a>
+
+                    <ul>
+                        <li>
+                            <a href="clientes.html">
+                                <i class='bx bx-user'></i>
+                                Clientes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="empleados.html">
+                                <i class='bx bx-id-card'></i>
+                                Empleados
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                        Inventario
+                    </a>
+
+                    <ul>
+                        <li>
+                            <a href="productos.html">
+                                <i class='bx bx-box'></i>
+                                Productos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="categoria.html">
+                                <i class='bx bx-category'></i>
+                                Categorías
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stok.html">
+                                <i class='bx bx-layer'></i>
+                                Stock
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="reportes.html">
+                        <i class='bx bx-line-chart'></i>
+                        Reportes
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="factura-main">
+
+        <!-- TARJETAS -->
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <i class='bx bx-receipt'></i>
+                <h3>Facturas Emitidas</h3>
+                <span>1,245</span>
+            </div>
+
+            <div class="dashboard-card">
+                <i class='bx bx-user'></i>
+                <h3>Clientes Registrados</h3>
+                <span>528</span>
+            </div>
+
+            <div class="dashboard-card">
+                <i class='bx bx-package'></i>
+                <h3>Productos</h3>
+                <span>320</span>
+            </div>
+
+            <div class="dashboard-card">
+                <i class='bx bx-dollar-circle'></i>
+                <h3>Ventas del Mes</h3>
+                <span>$15.8M</span>
+            </div>
+
+        </div>
+
+        <!-- ACCESOS RAPIDOS -->
+        <div class="factura-header" style="margin-top:25px;">
+
+            <h2 class="factura-title" style="font-size:28px;">
+                <i class='bx bx-rocket'></i>
+                Accesos Rápidos
+            </h2>
+
+            <div class="factura-buttons" style="margin-top:20px;">
+
+                <button onclick="location.href='facturas.html'">
+                    <i class='bx bx-file'></i>
+                    Facturas
+                </button>
+
+                <button onclick="location.href='clientes.html'">
+                    <i class='bx bx-user'></i>
+                    Clientes
+                </button>
+
+                <button onclick="location.href='productos.html'">
+                    <i class='bx bx-box'></i>
+                    Productos
+                </button>
+
+                <button onclick="location.href='reportes.html'">
+                    <i class='bx bx-line-chart'></i>
+                    Reportes
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+    <p>
+        ABL Solutions ® 2026 - Todos los derechos reservados
+    </p>
+</section>
+```
 
 </body>
 

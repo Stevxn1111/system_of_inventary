@@ -1,113 +1,435 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facturas - ABL Solutions</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../img/logo_ABL.jpeg" type="image/jpeg">
+
+```
+<link rel="stylesheet" href="../style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" href="../img/logo_ABL.jpeg" type="image/jpeg">
+```
 
 </head>
-<body>
-    <section class="header">
-        <h1 class="tituloEmpresa">A.B.L</h1>
-        <p clas="parrafo_principal"><strong>Empresa encargada de gestionar tus facturas electrónicas de manera eficiente y segura</strong></p>
-        <img class="logo-header" src="../img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
-    </section>
-    
-    <section class="factura-header">
-        <h1 class="factura-title">Facturas</h1>
-        <p class="factura-subtitle">Aquí puedes revisar facturas y navegar por las secciones principales.</p>
-    </section>
 
-    <div class="factura-page">
-        <section class="listaMenu factura-sidebar">
-            <h2>Menu</h2>
+<body>
+
+```
+<!-- HEADER -->
+<section class="header">
+
+    <div>
+        <h1 class="tituloEmpresa">A.B.L Solutions</h1>
+
+        <p class="parrafo_principal">
+            Gestión eficiente y segura de facturación electrónica
+        </p>
+    </div>
+
+    <img class="logo-header"
+         src="../img/logo_ABL.jpeg"
+         alt="Logo ABL">
+
+</section>
+
+<!-- NAVEGACIÓN -->
+<section class="navegacion">
+
+    <button>
+        <i class='bx bx-help-circle'></i>
+        Ayuda
+    </button>
+
+    <button>
+        <i class='bx bx-cog'></i>
+        Configuración
+    </button>
+
+</section>
+
+<!-- TITULO -->
+<section class="factura-header">
+
+    <h1 class="factura-title">
+        <i class='bx bx-receipt'></i>
+        Facturas
+    </h1>
+
+    <p class="factura-subtitle">
+        Administra, consulta y controla todas las facturas emitidas.
+    </p>
+
+</section>
+
+<section class="factura-page">
+
+    <!-- MENU -->
+    <aside class="factura-sidebar">
+
+        <section class="listaMenu">
+
+            <h2 class="h2_menu">
+                <i class='bx bx-menu'></i>
+                Menú
+            </h2>
+
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#ingresos">Ingresos</a>
+
+                <li>
+                    <a href="index.html">
+                        <i class='bx bx-home'></i>
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bx-receipt'></i>
+                        Ingresos
+                    </a>
+
                     <ul>
-                        <li><a href="facturas.html">Facturas</a></li>
-                        <li><a href="notas-credito.html">Notas Credito</a></li>
-                        <li><a href="notas-debito.html">Notas Debito</a></li>
+                        <li>
+                            <a href="facturas.html">
+                                <i class='bx bx-file'></i>
+                                Facturas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notas-credito.html">
+                                <i class='bx bx-wallet'></i>
+                                Notas Crédito
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notas-debito.html">
+                                <i class='bx bx-credit-card'></i>
+                                Notas Débito
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#personas">Personas</a>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bx-group'></i>
+                        Personas
+                    </a>
+
                     <ul>
-                        <li><a href="clientes.html">Clientes</a></li>
-                        <li><a href="empleados.html">Empleados</a></li>
+                        <li>
+                            <a href="clientes.html">
+                                <i class='bx bx-user'></i>
+                                Clientes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="empleados.html">
+                                <i class='bx bx-id-card'></i>
+                                Empleados
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#inventario">Inventario</a>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                        Inventario
+                    </a>
+
                     <ul>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="categoria.html">Categoria</a></li>
-                        <li><a href="stok.html">Stok</a></li>
+                        <li>
+                            <a href="productos.html">
+                                <i class='bx bx-box'></i>
+                                Productos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="categoria.html">
+                                <i class='bx bx-category'></i>
+                                Categorías
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stok.html">
+                                <i class='bx bx-layer'></i>
+                                Stock
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="reportes.html">Reportes</a></li>
+
+                <li>
+                    <a href="reportes.html">
+                        <i class='bx bx-line-chart'></i>
+                        Reportes
+                    </a>
+                </li>
+
             </ul>
+
         </section>
 
-        <main class="factura-main">
-            <div class="factura-controls">
-                <div class="factura-buttons">
-                    <button type="button" onclick="location.href='nueva-factura.html'">Nueva Factura</button>
-                    <button type="button">Solicitud Reporte</button>
-                    <button type="button">Importar</button>
-                </div>
-                <div class="factura-search">
-                    <input type="text" placeholder="Buscar factura...">
-                </div>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="factura-main">
+
+        <!-- CONTROLES -->
+        <section class="factura-controls">
+
+            <div class="factura-buttons">
+
+                <button onclick="location.href='nueva-factura.html'">
+                    <i class='bx bx-plus-circle'></i>
+                    Nueva Factura
+                </button>
+
+                <button>
+                    <i class='bx bx-file-find'></i>
+                    Solicitar Reporte
+                </button>
+
+                <button>
+                    <i class='bx bx-import'></i>
+                    Importar
+                </button>
+
             </div>
 
-            <div class="factura-table-wrapper">
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Número</th>
-                            <th>Fecha</th>
-                            <th>Cliente</th>
-                            <th>Total</th>
-                            <th>Estado de Pago</th>
-                            <th>Estado de Emisión</th>
-                            <th>Acciones
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>2026-05-01</td>
-                            <td>Juan Pérez</td>
-                            <td>$100.00</td>
-                            <td>Pagado</td>
-                            <td>Emitida</td>
-                            <td>
-                                <button onclick="mostrarMenu(event)">Ver</button></td>
-                        
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>2026-05-02</td>
-                            <td>María García</td>
-                            <td>$75.00</td>
-                            <td>Pendiente</td>
-                            <td>Emitida</td>
-                            <td>Ver</td>
-                        </tr>
-                        <!-- Agrega más filas según necesites -->
-                    </tbody>
-                </table>
-            </div>
-        </main>
-    </div>
-      <section class=" footer">
-        <p> ABL.Soluciones ® 2026. Todos los derechos reservados</p>
-    </section>
+            <div class="factura-search">
 
-    <div id="menuOpciones" class="menu_ver">
-    <button onclick="editarFactura(1)">Editar</button>
-    <button onclick="eliminarFactura(1)">Eliminar</button>
+                <input
+                    type="search"
+                    placeholder="Buscar factura por cliente, número o estado...">
+
+            </div>
+
+        </section>
+
+        <!-- TABLA -->
+        <section class="factura-table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th># Factura</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Total</th>
+                        <th>Pago</th>
+                        <th>Emisión</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>FAC-001</td>
+                        <td>01/06/2026</td>
+                        <td>Juan Pérez</td>
+                        <td>$100.000</td>
+
+                        <td>
+                            <span class="badge badge-success">
+                                <i class='bx bx-check-circle'></i>
+                                Pagado
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="badge badge-info">
+                                <i class='bx bx-send'></i>
+                                Emitida
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="action-buttons">
+
+                                <button class="btn-view"
+                                        onclick="mostrarMenu(event,1)">
+                                    <i class='bx bx-dots-vertical-rounded'></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>FAC-002</td>
+                        <td>03/06/2026</td>
+                        <td>María García</td>
+                        <td>$250.000</td>
+
+                        <td>
+                            <span class="badge badge-warning">
+                                <i class='bx bx-time-five'></i>
+                                Pendiente
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="badge badge-info">
+                                <i class='bx bx-send'></i>
+                                Emitida
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="action-buttons">
+
+                                <button class="btn-view"
+                                        onclick="mostrarMenu(event,2)">
+                                    <i class='bx bx-dots-vertical-rounded'></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>FAC-003</td>
+                        <td>05/06/2026</td>
+                        <td>Empresa SAS</td>
+                        <td>$850.000</td>
+
+                        <td>
+                            <span class="badge badge-danger">
+                                <i class='bx bx-error-circle'></i>
+                                Vencida
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="badge badge-info">
+                                <i class='bx bx-send'></i>
+                                Emitida
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="action-buttons">
+
+                                <button class="btn-view"
+                                        onclick="mostrarMenu(event,3)">
+                                    <i class='bx bx-dots-vertical-rounded'></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</section>
+
+<!-- MENU CONTEXTUAL -->
+<div id="menuOpciones" class="menu_ver">
+
+    <button onclick="verFactura()">
+        <i class='bx bx-show'></i>
+        Ver Factura
+    </button>
+
+    <button onclick="editarFactura()">
+        <i class='bx bx-edit'></i>
+        Editar
+    </button>
+
+    <button onclick="duplicarFactura()">
+        <i class='bx bx-copy'></i>
+        Duplicar
+    </button>
+
+    <button onclick="imprimirFactura()">
+        <i class='bx bx-printer'></i>
+        Imprimir
+    </button>
+
+    <button onclick="eliminarFactura(idFacturaSeleccionada)">
+        <i class='bx bx-trash'></i>
+        Eliminar
+    </button>
+
 </div>
-    <script src="mostrar_ver.js" ></script>
+
+<!-- FOOTER -->
+<section class="footer">
+    <p>ABL Solutions ® 2026 - Todos los derechos reservados</p>
+</section>
+
+<script>
+
+    let idFacturaSeleccionada = 0;
+
+    function mostrarMenu(event, id){
+
+        event.stopPropagation();
+
+        idFacturaSeleccionada = id;
+
+        const menu = document.getElementById("menuOpciones");
+
+        menu.style.display = "block";
+        menu.style.left = event.pageX + "px";
+        menu.style.top = event.pageY + "px";
+    }
+
+    document.addEventListener("click", function(){
+
+        document.getElementById("menuOpciones").style.display = "none";
+
+    });
+
+    function verFactura(){
+        alert("Ver factura ID: " + idFacturaSeleccionada);
+    }
+
+    function editarFactura(){
+        alert("Editar factura ID: " + idFacturaSeleccionada);
+    }
+
+    function duplicarFactura(){
+        alert("Duplicar factura ID: " + idFacturaSeleccionada);
+    }
+
+    function imprimirFactura(){
+        alert("Imprimir factura ID: " + idFacturaSeleccionada);
+    }
+
+</script>
+```
+
 </body>
+
 </html>

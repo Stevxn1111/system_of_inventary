@@ -1,213 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>ABL.Solutions</title>
+    <title>Nuevo Cliente - ABL Solutions</title>
 
     <link rel="stylesheet" href="../style.css">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
     <link rel="icon" href="../img/logo_ABL.jpeg" type="image/jpeg">
-
-
-
 </head>
 
 <body>
+
+    <!-- HEADER -->
+
     <section class="header">
-        <h1 class="tituloEmpresa"> A.B.L</h1>
-        <p class="parrafo_principal"><strong>
-            Empresa encargada de gestionar tus facturas electronicas de manera eficiente y segura
-            </strong>
-        </p>
-        <img class="logo-header" src="../img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
+
+        <div>
+            <h1 class="tituloEmpresa">
+                <i class='bx bx-buildings'></i>
+                A.B.L Solutions
+            </h1>
+
+            <p class="parrafo_principal">
+                Registro y administración de clientes.
+            </p>
+        </div>
+
+        <img
+            class="logo-header"
+            src="../img/logo_ABL.jpeg"
+            alt="Logo ABL">
+
     </section>
 
-<button type="button" onclick="window.location.href='clientes.html'">
-    ← Volver a Clientes
-</button>
+    <!-- TITULO -->
 
-<div class="cliente-container">
+    <section class="factura-header">
 
-    <h2 class="factura-title">Nuevo Cliente</h2>
+        <h1 class="factura-title">
+            <i class='bx bx-user-plus'></i>
+            Nuevo Cliente
+        </h1>
 
-    <!-- Tipo identificación -->
-    <label>Tipo de identificación</label>
+        <p class="factura-subtitle">
+            Complete la información para registrar un nuevo cliente.
+        </p>
 
-    <select name="tipo_identificacion" id="tipo_identificacion" onchange="validarCampos()">
+    </section>
 
-        <option>Cédula de ciudadanía</option>
-        <option>Cédula de extranjería</option>
-        <option>Documento de identificación extranjero</option>
-        <option value="nit">NIT</option>
-        <option value="nit_otro">NIT de otro país</option>
-        <option>NUIP</option>
-        <option>Pasaporte</option>
-        <option>PEP</option>
-        <option>Permiso de protección temporal</option>
-        <option>Registro civil</option>
-        <option>Tarjeta de extranjería</option>
-        <option>Tarjeta de identidad</option>
+    <div class="cliente-container">
 
-    </select>
+        <!-- BOTONES -->
 
-    <br><br>
+        <div class="factura-buttons" style="margin-bottom:25px;">
 
-    <label>Primer nombre</label>
-    <input type="text" id="primer_nombre">
+            <button
+                type="button"
+                onclick="window.location.href='clientes.html'">
 
-    <br><br>
+                <i class='bx bx-arrow-back'></i>
+                Volver
 
-    <label>Segundo nombre</label>
-    <input type="text" id="segundo_nombre">
+            </button>
 
-    <br><br>
+        </div>
 
-    <label>Primer apellido</label>
-    <input type="text" id="primer_apellido">
+        <!-- FORMULARIO -->
 
-    <br><br>
+        <form>
 
-    <label>Segundo apellido</label>
-    <input type="text" id="segundo_apellido">
+            <div class="form-grid">
 
-    <br><br>
+                <div class="form-row">
+                    <label>
+                        <i class='bx bx-id-card'></i>
+                        Tipo de identificación
+                    </label>
 
-    <label>Naturaleza</label>
+                    <select
+                        id="tipo_identificacion"
+                        onchange="validarCampos()">
 
-    <select id="naturaleza">
-        <option>Persona jurídica</option>
-        <option>Persona natural</option>
-    </select>
+                        <option>Cédula de ciudadanía</option>
+                        <option>Cédula de extranjería</option>
+                        <option>Documento de identificación extranjero</option>
+                        <option value="nit">NIT</option>
+                        <option value="nit_otro">NIT de otro país</option>
+                        <option>NUIP</option>
+                        <option>Pasaporte</option>
+                        <option>PEP</option>
+                        <option>Permiso de protección temporal</option>
+                        <option>Registro civil</option>
+                        <option>Tarjeta de extranjería</option>
+                        <option>Tarjeta de identidad</option>
 
-    <br><br>
+                    </select>
+                </div>
 
-    <label>Nombre comercial</label>
-    <input type="text" id="nombre_comercial">
+                <div class="form-row">
+                    <label>
+                        <i class='bx bx-hash'></i>
+                        Número identificación
+                    </label>
 
-    <br><br>
+                    <input type="text">
+                </div>
 
-    <label>Responsabilidades tributarias</label>
+                <div class="form-row">
+                    <label>
+                        <i class='bx bx-user'></i>
+                        Primer nombre
+                    </label>
 
-    <select>
-        <option>IVA</option>
-        <option>INC</option>
-        <option>IVA e INC</option>
-        <option>No aplica</option>
-    </select>
+                    <input
+                        type="text"
+                        id="primer_nombre">
+                </div>
 
-    <br><br>
+                <div class="form-row">
+                    <label>
+                        Segundo nombre
+                    </label>
 
-    <label>Número de identificación</label>
-    <input type="text">
+                    <input
+                        type="text"
+                        id="segundo_nombre">
+                </div>
 
-    <br><br>
+                <div class="form-row">
+                    <label>
+                        Primer apellido
+                    </label>
 
-    <label>D. Verificación</label>
-    <input type="text" id="dv">
+                    <input
+                        type="text"
+                        id="primer_apellido">
+                </div>
 
-    <br><br>
+                <div class="form-row">
+                    <label>
+                        Segundo apellido
+                    </label>
 
-    <label>Razón social</label>
-    <input type="text" id="razon_social">
+                    <input
+                        type="text"
+                        id="segundo_apellido">
+                </div>
 
-    <br><br>
+                <div class="form-row">
+                    <label>
+                        Naturaleza
+                    </label>
 
-    <label>Responsabilidades fiscales</label>
-    <textarea></textarea>
+                    <select id="naturaleza">
 
-    <br><br>
+                        <option>
+                            Persona jurídica
+                        </option>
 
-    <label>Correo recepción documentos electrónicos</label>
-    <input type="email">
+                        <option>
+                            Persona natural
+                        </option>
 
-    <br><br>
+                    </select>
+                </div>
 
-    <!-- PROVEEDOR -->
-    <details>
+                <div class="form-row">
+                    <label>
+                        Nombre comercial
+                    </label>
 
-        <summary><strong>Proveedor</strong></summary>
+                    <input
+                        type="text"
+                        id="nombre_comercial">
+                </div>
 
-        <br>
+                <div class="form-row">
+                    <label>
+                        Razón social
+                    </label>
 
-        <label>Tipo proveedor</label>
+                    <input
+                        type="text"
+                        id="razon_social">
+                </div>
 
-        <select id="tipo_proveedor">
-            <option>Residente</option>
-            <option>No residente</option>
-            <option>No aplica</option>
-        </select>
+                <div class="form-row">
+                    <label>
+                        Dígito verificación
+                    </label>
 
-    </details>
+                    <input
+                        type="text"
+                        id="dv">
+                </div>
 
-    <br>
+                <div class="form-row">
+                    <label>
+                        Responsabilidad tributaria
+                    </label>
 
-    <!-- FORMULARIO AVANZADO -->
-    <details>
+                    <select>
 
-        <summary><strong>Formulario avanzado</strong></summary>
+                        <option>IVA</option>
+                        <option>INC</option>
+                        <option>IVA e INC</option>
+                        <option>No aplica</option>
 
-        <br>
+                    </select>
+                </div>
 
-        <h3>Principal</h3>
+                <div class="form-row">
+                    <label>
+                        Correo electrónico
+                    </label>
 
-        <label>Dirección</label>
-        <input type="text">
+                    <input type="email">
+                </div>
 
-        <br><br>
+            </div>
 
-        <label>Ciudad</label>
-        <input type="text">
+            <!-- PROVEEDOR -->
 
-        <br><br>
+            <details class="premium-details">
 
-        <label>Teléfono celular</label>
-        <input type="text">
+                <summary>
+                    <i class='bx bx-store'></i>
+                    Información de proveedor
+                </summary>
 
-        <br><br>
+                <div class="details-content">
 
-        <label>Teléfono fijo</label>
-        <input type="text">
+                    <div class="form-row">
 
-        <br><br>
+                        <label>
+                            Tipo proveedor
+                        </label>
 
-        <label>Correo electrónico contacto</label>
-        <input type="email">
+                        <select id="tipo_proveedor">
 
-        <br><br>
+                            <option>Residente</option>
+                            <option>No residente</option>
+                            <option>No aplica</option>
 
-        <h3>Gestión de direcciones</h3>
+                        </select>
 
-        <button type="button">
-            Agregar dirección
-        </button>
+                    </div>
 
-        <button type="button">
-            Eliminar dirección
-        </button>
+                </div>
 
-    </details>
+            </details>
 
-    <br><br>
+            <!-- FORMULARIO AVANZADO -->
 
-    <button type="submit">
-        Guardar Cliente
-    </button>
+            <details class="premium-details">
 
-    <button type="reset">
-        Cancelar
-    </button>
+                <summary>
+                    <i class='bx bx-cog'></i>
+                    Formulario avanzado
+                </summary>
 
-</div>
+                <div class="details-content">
+
+                    <div class="form-grid">
+
+                        <div class="form-row">
+                            <label>Dirección</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Ciudad</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Celular</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Teléfono fijo</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Correo contacto</label>
+                            <input type="email">
+                        </div>
+
+                    </div>
+
+                    <div class="acciones-direccion">
+
+                        <button type="button">
+
+                            <i class='bx bx-plus'></i>
+                            Agregar dirección
+
+                        </button>
+
+                        <button type="button">
+
+                            <i class='bx bx-trash'></i>
+                            Eliminar dirección
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+            <!-- BOTONES -->
+
+            <div class="acciones-finales">
+
+                <button type="submit">
+
+                    <i class='bx bx-save'></i>
+                    Guardar Cliente
+
+                </button>
+
+                <button type="reset">
+
+                    <i class='bx bx-x'></i>
+                    Cancelar
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
 
 <script>
 
@@ -223,7 +356,7 @@ function validarCampos() {
     let razonSocial = document.getElementById("razon_social");
     let dv = document.getElementById("dv");
 
-    if (tipo == "nit" || tipo == "nit_otro") {
+    if(tipo == "nit" || tipo == "nit_otro"){
 
         primerNombre.value = "No aplica";
         segundoNombre.value = "No aplica";
@@ -233,9 +366,7 @@ function validarCampos() {
         razonSocial.value = "";
         dv.value = "";
 
-    } 
-    
-    else {
+    }else{
 
         razonSocial.value = "No aplica";
         dv.value = "No aplica";
@@ -244,6 +375,7 @@ function validarCampos() {
         segundoNombre.value = "";
         primerApellido.value = "";
         segundoApellido.value = "";
+
     }
 }
 

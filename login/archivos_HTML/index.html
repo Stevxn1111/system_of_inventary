@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,52 +7,113 @@
     <link rel="stylesheet" href="../archivos_CSS/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
-
-
 </head>
+
 <body>
+
+<div class="overlay"></div>
+
+<!-- BOTÓN MODO -->
+<button class="modo" id="modoBtn">
+    <i class='bx bx-moon'></i>
+</button>
 
 <div class="login">
 
-
+    <div class="brand">
+        <i class='bx bxs-shield-alt-2'></i>
+        <span>Login</span>
+    </div>
 
     <form id="formularioLogin">
-        <h2> Iniciar Sesion</h2>
-        <br>
+
+        <h2><i class='bx bx-log-in-circle'></i> Iniciar Sesión</h2>
+
         <div class="campos">
-            <input type="text" placeholder="Usuario" required>
+            <input type="text" id="usuario" placeholder="Usuario" required>
             <icono class="bx bxs-user"></icono>
-
         </div>
-        <div class="campos">
 
-            <input type="password"  placeholder="Contraseña" required>
+        <div class="campos">
+            <input type="password" id="password" placeholder="Contraseña" required>
+            
+            <!-- ver contraseña -->
+            <i class='bx bx-show toggle-pass' id="togglePass"></i>
+
             <icono class="bx bxs-lock-alt"></icono>
         </div>
 
         <div class="recordar-Datos">
-            <label> <input type="checkbox"> Recordar Datos </label>
+            <label>
+                <input type="checkbox">
+                <i class='bx bx-save'></i> Recordar Datos
+            </label>
         </div>
 
-
-            <button type="submit" class="boton"> Acceder</button>
-
+        <button type="submit" class="boton">
+            <i class='bx bx-right-arrow-alt'></i> Acceder
+        </button>
 
         <div class="registro">
-            <p> No tienes cuenta
-                <a href="formularioDeInscripcion.html"> Registrarse</a>
+            <p>No tienes cuenta 
+                <a href="#">
+                    <i class='bx bx-user-plus'></i> Registrarse
+                </a>
             </p>
-
         </div>
-
 
     </form>
 </div>
-<div class=" img">
-</div>
 
+<script>
+/* VER / OCULTAR CONTRASEÑA */
+const pass = document.getElementById("password");
+const toggle = document.getElementById("togglePass");
 
+toggle.addEventListener("click", () => {
+    if(pass.type === "password"){
+        pass.type = "text";
+        toggle.classList.replace("bx-show", "bx-hide");
+    } else {
+        pass.type = "password";
+        toggle.classList.replace("bx-hide", "bx-show");
+    }
+});
+
+/* VALIDACIÓN SIMPLE ANIMADA */
+document.getElementById("formularioLogin").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const user = document.getElementById("usuario");
+    const pass = document.getElementById("password");
+
+    if(user.value.length < 3){
+        user.classList.add("error");
+        return;
+    }
+
+    if(pass.value.length < 4){
+        pass.classList.add("error");
+        return;
+    }
+
+    alert("Login exitoso 🚀");
+});
+
+/* quitar error al escribir */
+document.querySelectorAll("input").forEach(input=>{
+    input.addEventListener("input", ()=>{
+        input.classList.remove("error");
+    });
+});
+
+/* MODO OSCURO / CLARO */
+const modoBtn = document.getElementById("modoBtn");
+
+modoBtn.addEventListener("click", ()=>{
+    document.body.classList.toggle("light");
+});
+</script>
 
 </body>
 </html>

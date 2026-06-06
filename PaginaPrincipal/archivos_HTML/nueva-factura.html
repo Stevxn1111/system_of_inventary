@@ -1,72 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Nueva Factura - ABL Solutions</title>
+    <title>Nueva Factura | ABL Solutions</title>
+
     <link rel="stylesheet" href="../style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../img/logo_ABL.jpeg">
 </head>
-<body class="nueva-factura-page">
+
+<body>
+
+    <section class="header">
+        <div>
+            <h1 class="tituloEmpresa">A.B.L</h1>
+            <p class="parrafo_principal">
+                <strong>Facturación electrónica inteligente</strong>
+            </p>
+        </div>
+
+        <img class="logo-header"
+            src="../img/logo_ABL.jpeg"
+            alt="Logo">
+    </section>
+
+    <section class="factura-header">
+
+        <h1 class="factura-title">
+            <i class='bx bx-receipt'></i>
+            Nueva Factura
+        </h1>
+
+        <p class="factura-subtitle">
+            Crea, firma y administra facturas electrónicas.
+        </p>
+
+    </section>
+
     <div class="page-card">
+
+        <!-- BOTONES -->
         <section class="action-buttons-panel">
-            <button type="button">Guardar Borrador</button>
-            <button type="button">Guardar y Firmar</button>
-            <button type="button">Guardar y Agregar Pago</button>
-            <button type="button" onclick="location.href='index.html'" class="btn-volver">Volver al Menú</button>
+
+            <button>
+                <i class='bx bx-save'></i>
+                Guardar Borrador
+            </button>
+
+            <button>
+                <i class='bx bx-check-shield'></i>
+                Guardar y Firmar
+            </button>
+
+            <button>
+                <i class='bx bx-wallet'></i>
+                Guardar y Registrar Pago
+            </button>
+
+            <button
+                class="btn-volver"
+                onclick="location.href='index.html'">
+
+                <i class='bx bx-arrow-back'></i>
+                Volver
+
+            </button>
+
         </section>
 
+        <!-- CLIENTES -->
         <section class="cliente-panel">
-            <h2>Buscar Clientes</h2>
+
+            <h2>
+                <i class='bx bx-search-alt'></i>
+                Buscar Cliente
+            </h2>
+
             <div class="cliente-search">
-                <input type="text" placeholder="Buscar cliente por nombre...">
+                <input
+                    type="text"
+                    placeholder="Buscar cliente...">
             </div>
+
             <ul class="cliente-list">
-                <li>Juan Pérez - Cliente frecuente</li>
-                <li>María García - Empresa S.A.</li>
-                <li>Carlos Martínez - Contado</li>
+
+                <li>
+                    <i class='bx bx-user'></i>
+                    Juan Pérez
+                </li>
+
+                <li>
+                    <i class='bx bx-building'></i>
+                    Empresa S.A.S
+                </li>
+
+                <li>
+                    <i class='bx bx-user'></i>
+                    Carlos Martínez
+                </li>
+
             </ul>
+
         </section>
 
+        <!-- ITEMS -->
         <section class="items-panel">
+
             <div class="items-header">
-                <h2>Items de Venta</h2>
-                <button type="button">Agregar Item</button>
+
+                <h2>
+                    <i class='bx bx-cart'></i>
+                    Productos Facturados
+                </h2>
+
+                <button>
+                    <i class='bx bx-plus'></i>
+                    Agregar Item
+                </button>
+
             </div>
+
             <div class="items-table-wrapper">
+
                 <table>
+
                     <thead>
                         <tr>
-                            <th>Nombre</th>
+                            <th>Producto</th>
                             <th>Cantidad</th>
                             <th>Valor Unitario</th>
-                            <th>Impuesto</th>
+                            <th>IVA</th>
                             <th>Descuento</th>
-                            <th>Valor Total</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
+
                     <tbody>
+
                         <tr>
                             <td>Producto A</td>
                             <td>2</td>
-                            <td>$50.00</td>
-                            <td>$9.00</td>
-                            <td>$0.00</td>
-                            <td>$109.00</td>
+                            <td>$50.000</td>
+                            <td>$19.000</td>
+                            <td>$0</td>
+                            <td>$119.000</td>
                         </tr>
+
                         <tr>
                             <td>Producto B</td>
                             <td>1</td>
-                            <td>$75.00</td>
-                            <td>$13.50</td>
-                            <td>$0.00</td>
-                            <td>$88.50</td>
+                            <td>$80.000</td>
+                            <td>$15.200</td>
+                            <td>$0</td>
+                            <td>$95.200</td>
                         </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
+            <!-- RESUMEN -->
+
+            <div class="info-box">
+
+                <h3>
+                    <i class='bx bx-calculator'></i>
+                    Resumen Factura
+                </h3>
+
+                <p><strong>Subtotal:</strong> $130.000</p>
+                <p><strong>IVA:</strong> $34.200</p>
+                <p><strong>Total:</strong> $164.200</p>
+
+            </div>
+
         </section>
+
     </div>
-      <section class=" footer">
-        <p> ABL.Soluciones ® 2026. Todos los derechos reservados</p>
+
+    <section class="footer">
+        <p>ABL Solutions ® 2026 - Todos los derechos reservados</p>
     </section>
+
 </body>
 </html>

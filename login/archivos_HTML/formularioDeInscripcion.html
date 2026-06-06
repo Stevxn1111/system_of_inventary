@@ -1,68 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../archivos_CSS/styleFormulario.css">
-    <title>Formulario de Inscripcion </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <title>Formulario de Inscripción</title>
+
+    <link rel="stylesheet" href="../archivos_CSS/styleFormulario.css">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-<div class=" formularioInscripcion">
-    <form id="formulario">
-        <h2> Registrar Cliente</h2>
-        <h3> Ingresa sus Datos</h3>
+    <div class="formularioInscripcion">
 
-        <div class="campos">
-            <i class='bx bx-user'></i>
-            <input type="text" name="nombre" placeholder="Nombres" required>
+        <form id="formulario">
 
-        </div>
+            <h2>
+                <i class='bx bxs-user-badge'></i>
+                Registrar Cliente
+            </h2>
 
-        <div class="campos">
-            <i class='bx  bx-receipt'  ></i>
-            <input type="text" name="apellido" placeholder="Apellidos" required>
+            <h3>Ingresa sus datos personales</h3>
 
-        </div>
-        <div class="campos">
-            <i class='bx  bx-envelope-open'  ></i>
-            <input type="email" name="email" placeholder="Correo electronico" required>
+            <!-- Nombre -->
+            <div class="campos">
+                <i class='bx bx-user'></i>
+                <input
+                    type="text"
+                    name="nombre"
+                    placeholder="Nombres"
+                    required>
+            </div>
 
-        </div>
-        <div class="campos">
-            <i class='bx bx-phone'></i>
-            <input type="text" name="telefono" placeholder="Telefono" required>
+            <!-- Apellido -->
+            <div class="campos">
+                <i class='bx bx-id-card'></i>
+                <input
+                    type="text"
+                    name="apellido"
+                    placeholder="Apellidos"
+                    required>
+            </div>
 
+            <!-- Correo -->
+            <div class="campos">
+                <i class='bx bx-envelope'></i>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Correo electrónico"
+                    required>
+            </div>
 
-        </div>
-        <div class="campos">
-            <i class='bx  bx-user'  ></i>
-            <input type="usuario" name="usuario" placeholder="Usuario" required>
+            <!-- Teléfono -->
+            <div class="campos">
+                <i class='bx bx-phone'></i>
+                <input
+                    type="text"
+                    name="telefono"
+                    placeholder="Teléfono"
+                    required>
+            </div>
 
+            <!-- Usuario -->
+            <div class="campos">
+                <i class='bx bx-user-circle'></i>
+                <input
+                    type="text"
+                    name="usuario"
+                    placeholder="Usuario"
+                    required>
+            </div>
 
-        </div>
-        <div class="campos">
-            <i class='bx bx-lock'></i>
-            <input type="password" name="pasword" placeholder="Contraseña" required>
+            <!-- Contraseña -->
+            <div class="campos">
+                <i class='bx bx-lock-alt'></i>
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Contraseña"
+                    required>
+            </div>
 
-        </div>
+            <!-- Botones -->
 
+            <button
+                class="botones"
+                id="btn_registrar"
+                type="submit">
+                <i class='bx bx-user-plus'></i>
+                Registrarse
+            </button>
 
-            <button class= "botones" id = "btn_registrar" type="submit">Registrarse</button>
-            
-            <button class= "botones" id = "btn_limpiar"  type="reset">Limpiar</button>
+            <button
+                class="botones"
+                id="btn_limpiar"
+                type="reset">
+                <i class='bx bx-eraser'></i>
+                Limpiar
+            </button>
 
-            <button class= "botones" id = "btn_volver"  type="button" onclick="window.location.href='../index.html'">Volver</button>
+            <button
+                class="botones"
+                id="btn_volver"
+                type="button"
+                onclick="window.location.href='../index.html'">
+                <i class='bx bx-arrow-back'></i>
+                Volver
+            </button>
 
+        </form>
 
-    </form>
-
-
-
-
-</div>
+    </div>
 
 </body>
+
 </html>
