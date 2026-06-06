@@ -1,8 +1,9 @@
 <!DOCTYPE html> 
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABL Solutions | Login</title>
 
     <link rel="stylesheet" href="../archivos_CSS/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -11,108 +12,186 @@
 
 <body>
 
-<div class="overlay"></div>
+    <div class="overlay"></div>
 
-<!-- BOTÓN MODO -->
-<button class="modo" id="modoBtn">
-    <i class='bx bx-moon'></i>
-</button>
+    <!-- BOTÓN MODO -->
+    <button class="modo" id="modoBtn">
+        <i class='bx bx-moon'></i>
+    </button>
 
-<div class="login">
+    <div class="login">
 
-    <div class="brand">
-        <i class='bx bxs-shield-alt-2'></i>
-        <span>Login</span>
+        <!-- LOGO EMPRESA -->
+        <div class="brand">
+            <img src="../imagenes/Logo.jpeg">
+            <span>ABL Solutions</span>
+        </div>
+
+        <form id="formularioLogin">
+
+            <h2>
+                <i class='bx bx-log-in-circle'></i>
+                Iniciar Sesión
+            </h2>
+
+            <p class="subtitulo">
+                Sistema de Inventario Empresarial
+            </p>
+
+            <div class="campos">
+                <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Usuario"
+                    required>
+
+                <icono class="bx bxs-user"></icono>
+            </div>
+
+            <div class="campos">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Contraseña"
+                    required>
+
+                <!-- VER CONTRASEÑA -->
+                <i class='bx bx-show toggle-pass' id="togglePass"></i>
+
+                <icono class="bx bxs-lock-alt"></icono>
+
+            </div>
+
+            <div class="recordar-Datos">
+                <label>
+                    <input type="checkbox">
+                    <i class='bx bx-save'></i>
+                    Recordar Datos
+                </label>
+            </div>
+
+            <button type="submit" class="boton">
+                <i class='bx bx-right-arrow-alt'></i>
+                Acceder
+            </button>
+
+            <div class="registro">
+                <p>
+                    No tienes cuenta
+                    <a href="#">
+                        <i class='bx bx-user-plus'></i>
+                        Registrarse
+                    </a>
+                </p>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer-login">
+                <p>© 2025 ABL Solutions</p>
+                <span>Gestión Inteligente de Inventarios</span>
+            </div>
+
+        </form>
+
     </div>
 
-    <form id="formularioLogin">
-
-        <h2><i class='bx bx-log-in-circle'></i> Iniciar Sesión</h2>
-
-        <div class="campos">
-            <input type="text" id="usuario" placeholder="Usuario" required>
-            <icono class="bx bxs-user"></icono>
-        </div>
-
-        <div class="campos">
-            <input type="password" id="password" placeholder="Contraseña" required>
-            
-            <!-- ver contraseña -->
-            <i class='bx bx-show toggle-pass' id="togglePass"></i>
-
-            <icono class="bx bxs-lock-alt"></icono>
-        </div>
-
-        <div class="recordar-Datos">
-            <label>
-                <input type="checkbox">
-                <i class='bx bx-save'></i> Recordar Datos
-            </label>
-        </div>
-
-        <button type="submit" class="boton">
-            <i class='bx bx-right-arrow-alt'></i> Acceder
-        </button>
-
-        <div class="registro">
-            <p>No tienes cuenta 
-                <a href="#">
-                    <i class='bx bx-user-plus'></i> Registrarse
-                </a>
-            </p>
-        </div>
-
-    </form>
-</div>
-
 <script>
-/* VER / OCULTAR CONTRASEÑA */
+
+/* ==========================
+   VER / OCULTAR CONTRASEÑA
+========================== */
+
 const pass = document.getElementById("password");
 const toggle = document.getElementById("togglePass");
 
 toggle.addEventListener("click", () => {
+
     if(pass.type === "password"){
+
         pass.type = "text";
-        toggle.classList.replace("bx-show", "bx-hide");
-    } else {
+        toggle.classList.replace("bx-show","bx-hide");
+
+    }else{
+
         pass.type = "password";
-        toggle.classList.replace("bx-hide", "bx-show");
+        toggle.classList.replace("bx-hide","bx-show");
+
     }
+
 });
 
-/* VALIDACIÓN SIMPLE ANIMADA */
-document.getElementById("formularioLogin").addEventListener("submit", function(e){
+/* ==========================
+   VALIDACIÓN SIMPLE
+========================== */
+
+document
+.getElementById("formularioLogin")
+.addEventListener("submit", function(e){
+
     e.preventDefault();
 
     const user = document.getElementById("usuario");
     const pass = document.getElementById("password");
 
     if(user.value.length < 3){
+
         user.classList.add("error");
         return;
+
     }
 
     if(pass.value.length < 4){
+
         pass.classList.add("error");
         return;
+
     }
 
     alert("Login exitoso 🚀");
+
 });
 
-/* quitar error al escribir */
-document.querySelectorAll("input").forEach(input=>{
-    input.addEventListener("input", ()=>{
+/* ==========================
+   QUITAR ERROR
+========================== */
+
+document
+.querySelectorAll("input")
+.forEach(input=>{
+
+    input.addEventListener("input",()=>{
+
         input.classList.remove("error");
+
     });
+
 });
 
-/* MODO OSCURO / CLARO */
+/* ==========================
+   MODO OSCURO / CLARO
+========================== */
+
 const modoBtn = document.getElementById("modoBtn");
 
-modoBtn.addEventListener("click", ()=>{
+modoBtn.addEventListener("click",()=>{
+
     document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+
+        modoBtn.innerHTML =
+        "<i class='bx bx-sun'></i>";
+
+    }else{
+
+        modoBtn.innerHTML =
+        "<i class='bx bx-moon'></i>";
+
+    }
+
 });
+
 </script>
 
 </body>
