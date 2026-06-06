@@ -44,29 +44,20 @@ body{
 ========================== */
 
 .modo{
-    position:absolute;
-    top:25px;
-    right:25px;
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+    background: none;
+    border: none;
+    font-size: 2rem; /* Ajusta el tamaño del icono */
+    color: var(--text);
+    cursor: pointer;
+    transition: transform .3s ease;
+}
 
-    width:48px;
-    height:48px;
-
-    border:none;
-    border-radius:50%;
-
-    background:white;
-    color:#0F172A;
-
-    cursor:pointer;
-
-    font-size:22px;
-
-    z-index:100;
-
-    box-shadow:
-        0 5px 20px rgba(0,0,0,.10);
-
-    transition:.3s ease;
+.modo:hover{
+    transform: scale(1.08) rotate(15deg);
 }
 
 .modo:hover{
@@ -503,4 +494,63 @@ body.light .login{
         rgba(255,255,255,.99),
         rgba(248,250,252,.95)
     );
+}
+
+/* ==========================
+   MODO OSCURO
+========================== */
+
+body.dark-mode{
+    background: #08101f;
+    background-image: none;
+}
+
+body.dark-mode .overlay{
+    background: rgba(0,0,0,.8);
+}
+
+body.dark-mode .login{
+    background: linear-gradient(145deg, rgba(6,16,31,.96), rgba(14,30,55,.98));
+    border-color: rgba(148,163,184,.16);
+    color: #e2e8f0;
+}
+
+body.dark-mode .login::before{
+    background: linear-gradient(90deg, #0d1326, #334155, #64748b);
+}
+
+body.dark-mode .login h2,
+body.dark-mode .brand span,
+body.dark-mode .subtitulo,
+body.dark-mode .registro p,
+body.dark-mode .footer-login p,
+body.dark-mode .footer-login span{
+    color: #e2e8f0;
+}
+
+body.dark-mode .campos input{
+    background: #0f172a;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+body.dark-mode .campos input::placeholder{
+    color: #94a3b8;
+}
+
+body.dark-mode icono,
+body.dark-mode .toggle-pass{
+    color: #cbd5e1;
+}
+
+body.dark-mode .modo{
+    color: #f8fafc;
+}
+
+body.dark-mode .boton{
+    background: linear-gradient(135deg,#2563eb,#0ea5e9);
+}
+
+body.dark-mode .boton:hover{
+    background: #1e40af;
 }

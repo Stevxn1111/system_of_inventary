@@ -1010,3 +1010,115 @@ details[open]{
         font-size:24px;
     }
 }
+
+/* ==========================
+   MODO OSCURO
+========================== */
+
+.modo{
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 1000;
+    background: none;
+    border: none;
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: transform .3s ease, color .3s ease;
+}
+
+.modo:hover{
+    transform: scale(1.05);
+}
+
+body.dark-mode{
+    background: #07131f;
+    color: #e2e8f0;
+}
+
+body.dark-mode .header,
+body.dark-mode .navegacion,
+body.dark-mode .factura-header,
+body.dark-mode .footer,
+body.dark-mode .listaMenu,
+body.dark-mode .factura-sidebar,
+body.dark-mode .factura-main,
+body.dark-mode .dashboard-card,
+body.dark-mode .stat-card,
+body.dark-mode .report-card,
+body.dark-mode .factura-controls,
+body.dark-mode .factura-table-wrapper,
+body.dark-mode .table-card,
+body.dark-mode .modal-card,
+body.dark-mode .cliente-panel,
+body.dark-mode .items-panel,
+body.dark-mode .form-section,
+body.dark-mode details,
+body.dark-mode .page-card{
+    background: rgba(10, 18, 34, .95);
+    border-color: rgba(148,163,184,.18);
+    box-shadow: 0 15px 35px rgba(0,0,0,.3);
+}
+
+body.dark-mode .header,
+body.dark-mode .factura-title,
+body.dark-mode .tituloEmpresa,
+body.dark-mode .parrafo_principal,
+body.dark-mode .factura-subtitle,
+body.dark-mode .listaMenu h2,
+body.dark-mode .listaMenu a,
+body.dark-mode .dashboard-card h3,
+body.dark-mode .dashboard-card span,
+body.dark-mode .stat-card h3,
+body.dark-mode .stat-card h2,
+body.dark-mode .report-card h3,
+body.dark-mode .report-card p,
+body.dark-mode .factura-buttons button,
+body.dark-mode .registro p,
+body.dark-mode .footer-login p,
+body.dark-mode .footer-login span,
+body.dark-mode .modal-header h2,
+body.dark-mode .cliente-panel h2,
+body.dark-mode .items-panel h2{
+    color: #e2e8f0;
+}
+
+body.dark-mode .navegacion button,
+body.dark-mode .factura-buttons button,
+body.dark-mode .action-buttons-panel button,
+body.dark-mode .action-buttons button,
+body.dark-mode .barra-clientes button,
+body.dark-mode .boton,
+body.dark-mode #btn_registrar,
+body.dark-mode #btn_limpiar,
+body.dark-mode #btn_volver{
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    color: white;
+}
+
+body.dark-mode .factura-search input,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .campos input{
+    background: #0b1624;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode .campos input::placeholder,
+body.dark-mode .listaMenu a,
+body.dark-mode .recordar-Datos label,
+body.dark-mode .registro a{
+    color: #cbd5e1;
+}
+
+body.dark-mode .navegacion button:hover,
+body.dark-mode .factura-buttons button:hover,
+body.dark-mode .action-buttons-panel button:hover,
+body.dark-mode .action-buttons button:hover,
+body.dark-mode .barra-clientes button:hover,
+body.dark-mode .boton:hover{
+    transform: translateY(-2px);
+}

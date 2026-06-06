@@ -79,7 +79,7 @@
             <div class="registro">
                 <p>
                     No tienes cuenta
-                    <a href="#">
+                    <a href="formularioDeInscripcion.html">
                         <i class='bx bx-user-plus'></i>
                         Registrarse
                     </a>
@@ -125,74 +125,12 @@ toggle.addEventListener("click", () => {
    VALIDACIÓN SIMPLE
 ========================== */
 
-document
-.getElementById("formularioLogin")
-.addEventListener("submit", function(e){
 
-    e.preventDefault();
 
-    const user = document.getElementById("usuario");
-    const pass = document.getElementById("password");
-
-    if(user.value.length < 3){
-
-        user.classList.add("error");
-        return;
-
-    }
-
-    if(pass.value.length < 4){
-
-        pass.classList.add("error");
-        return;
-
-    }
-
-    alert("Login exitoso 🚀");
-
-});
-
-/* ==========================
-   QUITAR ERROR
-========================== */
-
-document
-.querySelectorAll("input")
-.forEach(input=>{
-
-    input.addEventListener("input",()=>{
-
-        input.classList.remove("error");
-
-    });
-
-});
-
-/* ==========================
-   MODO OSCURO / CLARO
-========================== */
-
-const modoBtn = document.getElementById("modoBtn");
-
-modoBtn.addEventListener("click",()=>{
-
-    document.body.classList.toggle("light");
-
-    if(document.body.classList.contains("light")){
-
-        modoBtn.innerHTML =
-        "<i class='bx bx-sun'></i>";
-
-    }else{
-
-        modoBtn.innerHTML =
-        "<i class='bx bx-moon'></i>";
-
-    }
-
-});
 
 </script>
 
+<script src="../archivos_JS/darkMode.js"></script>
+<script src="../archivos_JS/validacionesSimples.js"></script>
 </body>
 </html>

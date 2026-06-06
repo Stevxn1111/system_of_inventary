@@ -209,3 +209,63 @@ body::before{
         font-size: 14px;
     }
 }
+
+.modo{
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.modo:hover{
+    transform: scale(1.08) rotate(15deg);
+}
+
+body.dark-mode{
+    background: #050b19;
+}
+
+body.dark-mode::before{
+    background: rgba(0,0,0,0.45);
+}
+
+body.dark-mode .formularioInscripcion{
+    background: rgba(15,23,42,0.92);
+    border-color: rgba(148,163,184,0.18);
+    color: #cbd5e1;
+}
+
+body.dark-mode .formularioInscripcion h2,
+body.dark-mode .formularioInscripcion h3,
+body.dark-mode .campos i,
+body.dark-mode .campos input,
+body.dark-mode .botones{
+    color: #e2e8f0;
+}
+
+body.dark-mode .campos input{
+    background: rgba(15,23,42,.7);
+    border-color: rgba(148,163,184,.25);
+}
+
+body.dark-mode .botones{
+    color: white;
+}
+
+body.dark-mode #btn_registrar{
+    background: linear-gradient(135deg,#2563eb,#0ea5e9);
+}
+
+body.dark-mode #btn_limpiar{
+    background: linear-gradient(135deg,#fb923c,#f97316);
+}
+
+body.dark-mode #btn_volver{
+    background: linear-gradient(135deg,#ef4444,#dc2626);
+}
